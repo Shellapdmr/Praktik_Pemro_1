@@ -1,0 +1,12 @@
+x = 20
+y = 12
+hasil = x + y
+print("hasil = " + str(hasil))
+hasil = x - y
+print("hasil = " + str(hasil))
+hasil = x * y
+print("hasil = " + str(hasil))
+hasil = x / y
+print("hasil = " + str(hasil))
+hasil = x % y
+print("hasil = " + str(hasil))
