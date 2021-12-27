@@ -57,6 +57,20 @@ public class Siakad {
         if (jumlahData == 0) {
             System.out.println("Belum Ada Data");
         } else {
+            Mahasiswa header = new Mahasiswa();
+            header.getHeader();
+            System.out.println("Berikut Data Mahasiswa");
+            for (int i=0; i<jumlahData; i++){
+                mahasiswa[i].getDetail();
+            }
+            rerataIPK();
+        }
+    }
+
+    private void lihatDataKedua() { //Tanpa Header
+        if (jumlahData == 0) {
+            System.out.println("Belum Ada Data");
+        } else {
             System.out.println("Berikut Data Mahasiswa");
             for (int i=0; i<jumlahData; i++){
                 mahasiswa[i].getDetail();
@@ -96,7 +110,7 @@ public class Siakad {
         inputMahasiswa.setTinggiBadan(tinggi);
         mahasiswa[jumlahData] = inputMahasiswa;
         jumlahData++;
-        lihatData();
+        lihatDataKedua();
     }
 
     public void cariDataByNIM() {
