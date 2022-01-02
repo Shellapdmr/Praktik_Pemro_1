@@ -2,14 +2,12 @@ public class Mahasiswa extends Manusia {
     private String nim;
     private String nama;
     private double ipk;
-    private String alamat;
     private String semester;
 
-    public Mahasiswa(String nim, String nama, double ipk, String alamat, String semester) {
+    public Mahasiswa(String nim, String nama, double ipk, String semester) {
         this.nim = nim;
         this.nama = nama;
         this.ipk = ipk;
-        this.alamat = alamat;
         this.semester = semester;
 
     }
@@ -38,14 +36,6 @@ public class Mahasiswa extends Manusia {
         return this.ipk;
     }
 
-    public void setAlamat(String alamat) {
-        this.alamat = alamat;
-    }
-
-    public String getAlamat() {
-        return this.alamat;
-    }
-
     public void setSemester(String semester) {
         this.nim = semester;
     }
@@ -54,16 +44,14 @@ public class Mahasiswa extends Manusia {
         return this.semester;
     }
 
-
-
     public void getDetail() {
-        System.out.printf("%10s %10s %5s %10s %10s %20s %5s", this.nim, this.nama.toUpperCase(), this.ipk, String.valueOf(this.beratBadan), String.valueOf(this.tinggiBadan), String.valueOf(this.alamat), String.valueOf(this.semester));
+        System.out.printf("%10s %10s %5s %20s %10s %10s", this.nim, this.nama.toUpperCase(), this.ipk, String.valueOf(this.beratBadan), String.valueOf(this.tinggiBadan), String.valueOf(this.semester));
         System.out.println();
     }
 
     public void getHeader() {
         System.out.println("------------------------------------------------------------------------------------------");
-        System.out.printf("%10s %10s %5s %10s %10s %20s %5s", "NIM", "NAMA", "IPK", "BERAT BADAN", "TINGGI BADAN", "ALAMAT", "SEMESTER");
+        System.out.printf("%10s %10s %5s %20s %10s %10s", "NIM", "NAMA", "IPK", "BERAT BADAN", "TINGGI BADAN", "SEMESTER");
         System.out.println();
         System.out.println("------------------------------------------------------------------------------------------");
 

@@ -57,21 +57,8 @@ public class Siakad {
         if (jumlahData == 0) {
             System.out.println("Belum Ada Data");
         } else {
-            Mahasiswa header = new Mahasiswa();
-            header.getHeader();
             System.out.println("Berikut Data Mahasiswa");
-            for (int i=0; i<jumlahData; i++){
-                mahasiswa[i].getDetail();
-            }
-            rerataIPK();
-        }
-    }
-
-    private void lihatDataKedua() { //Tanpa Header
-        if (jumlahData == 0) {
-            System.out.println("Belum Ada Data");
-        } else {
-            System.out.println("Berikut Data Mahasiswa");
+            mahasiswa[0].getHeader();
             for (int i=0; i<jumlahData; i++){
                 mahasiswa[i].getDetail();
             }
@@ -100,17 +87,15 @@ public class Siakad {
             System.out.println("Anda harus memasukan bilangan desimal dengan menggunakan tanda titik. Silahkan edit IPK setelah input data"); 
         }  
         scan.nextLine();
-        System.out.print("Masukan alamat tempat tinggal mahasiswa = ");
-        String alamat = scan.nextLine();
         System.out.print("Masukan jumlah semester mahasiswa = ");
         String semester = scan.nextLine();
  
-        Mahasiswa inputMahasiswa = new Mahasiswa(nim, nama, ipk, alamat, semester);
+        Mahasiswa inputMahasiswa = new Mahasiswa(nim, nama, ipk, semester);
         inputMahasiswa.setBeratBadan(berat);
         inputMahasiswa.setTinggiBadan(tinggi);
         mahasiswa[jumlahData] = inputMahasiswa;
         jumlahData++;
-        lihatDataKedua();
+        lihatData();
     }
 
     public void cariDataByNIM() {
